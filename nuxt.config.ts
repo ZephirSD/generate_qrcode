@@ -8,6 +8,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Générateur de QR Code",
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/logo_app.png' },
+      ],
     },
   },
   css: ["~/assets/css/main.css"],
