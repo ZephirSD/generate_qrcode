@@ -6,7 +6,8 @@
       <h1 class="text-5xl font-bold text-center text-white py-3">
         Générateur de QR Code
       </h1>
-      <div class="pt-5 flex justify-center">
+      <h3 class="flex justify-center pt-5">Collez l'URL dans le champ</h3>
+      <div class="flex justify-center">
         <label class="input validator">
           <svg
             class="h-[1em] opacity-50"
@@ -31,15 +32,15 @@
           <input type="url" placeholder="https://" v-model="webURL" required />
         </label>
       </div>
-      <div class="flex justify-center" v-if="isValidUrl">
+      <div class="flex justify-center py-3" v-if="isValidUrl">
         <Qrcode
           :value="webURL"
           variant="circle"
-          class="pt-3 size-4/6"
+          class="size-4/6"
         />
       </div>
-      <div class="flex justify-center" v-else>
-        <Qrcode value="" variant="circle" class="pt-3 size-4/6" />
+      <div class="flex justify-center py-3" v-else>
+        <Qrcode value="" variant="circle" class="size-4/6" />
       </div>
     </div>
   </body>
